@@ -1,3 +1,3 @@
-# 1. Укажите аннотации типов для всех идентификаторов.
-example_list = [3, 4, 5, 6, 7]
+
+example_list: list[int] = [3, 4, 5, 6, 7]
 print(*example_list)

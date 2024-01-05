@@ -1,9 +1,5 @@
 # 1. Укажите аннотации типов для всех идентификаторов.
-line = input("Введите ваш текст: ").split()
+line: list[str] = input("Введите ваш текст: ").split()
 
-# Обратите внимание: длина слова составляет 3 или более символов
 print(len([word for word in
-           line if len(word) > 3]))
-
-# Входные данные: ubuntu lucky tt lol pop bulb flower window
-# 2. Вывод должен быть 7, в методичке в примера есть ошибка.
+           line if len(word) >= 3]))
