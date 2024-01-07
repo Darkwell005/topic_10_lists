@@ -4,5 +4,7 @@ if num not in num_list:
     print("Не найден")
 else:
     while num in num_list:
+        if num not in num_list:
+            break
         num_list.remove(num)
     print(num_list)
