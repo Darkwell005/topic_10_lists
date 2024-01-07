@@ -1,10 +1,16 @@
 num = int(input("Укажите элемент для удаления: "))
-num_list = [3, 3, 2, 1, 5, 3, 8, 11]
-if num not in num_list:
+nums: list[int, ...] = [3, 3, 2, 1, 5, 3, 8, 11]
+
+if not nums:
+    print("Пустой список")
+elif num not in nums:
     print("Не найден")
 else:
-    while num in num_list:
-        if num not in num_list:
-            break
-        num_list.remove(num)
-    print(num_list)
+    result = [x for x in nums if x != num]
+
+    # Option2
+    # for x in nums:
+    #     if x != num:
+    #         result.append(x)
+
+    print(result)

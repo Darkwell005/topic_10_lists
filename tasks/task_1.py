@@ -1,9 +1,14 @@
-
-num_list: list[int] = [15, 82, 30, 44, 10]
+num_list: list[int, ...] = [15, 82, 30, 44, 10]
 
 if not num_list:
     print("Пустой список")
 else:
-    # 2. Можно пойти двумя способами: либо через range либо через enumerate
-    for x in num_list:
-        print(x, num_list.index(x), sep=" ")
+    for i in range(len(num_list)):
+        print(num_list[i], i, sep=" ")
+
+# Option 2
+if not num_list:
+    print("Пустой список")
+else:
+    for idx, item in enumerate(num_list):
+        print(item, idx, sep=" ")
