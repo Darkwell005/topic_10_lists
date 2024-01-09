@@ -1,4 +1,5 @@
 from random import randint
+
 # example_list: list[int, ...] = [11, 1, 22, 33, 14, 0, 13, 22, 11, 22, 9, 33]
 
 # Список из 15 случайных чисел в диапазоне от 1 до 10
@@ -15,4 +16,3 @@ while i < len(example_list):
         del example_list[i]
 
 print('After:', example_list)
-
